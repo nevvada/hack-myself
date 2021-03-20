@@ -4,7 +4,7 @@
   "description": "SQL Injection Example",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon server/server.js"
   },
   "keywords": [],
   "author": "Nathan Le Master",

@@ -1,27 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SQL Injection Example</title>
-  <link rel="stylesheet" href="./styles.css">
-</head>
-<body>
-  <form>
-    <input
-      name="Full Name"
-      type="text"
-    />
-    <div>Favorite color</div>
-    <input
-      name=""
-      options=[]
-      type="radio"
-    />
-    <input
-      type="submit"
-    />
-  </form>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SQL Injection Example</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <form
+      action="/user"
+      method="POST"
+    >
+      <div class="form-field">
+        <div class="form-field-title">Full Name</div>
+        <input
+          name="full_name"
+          required
+          type="text"
+        />
+      </div>
+
+      <div class="form-field">
+        <div class="form-field-title">Favorite colors</div>
+        <input
+          name="favorite_color"
+          type="checkbox"
+          value="red"
+        />
+        <label for="red">red</label>
+
+        <input
+          name="favorite_color"
+          type="checkbox"
+          value="green"
+        />
+        <label for="green">green</label>
+
+        <input
+          name="favorite_color"
+          type="checkbox"
+          value="blue"
+        />
+        <label for="blue">blue</label>
+
+        <input
+          name="favorite_color"
+          type="checkbox"
+          value="other"
+        />
+        <label for="other">other</label>
+      </div>
+
+      <div class="form-field">
+        <div class="form-field-title">Ice cream preference</div>
+        <input
+          name="ice_cream_preference"
+          type="radio"
+          value="vanilla"
+        />
+        <label for="vanilla">vanilla</label>
+
+        <input
+          name="ice_cream_preference"
+          type="radio"
+          value="chocolate"
+        />
+        <label for="chocolate">chocolate</label>
+      </div>
+
+      <input type="submit" />
+    </form>
+  </body>
 </html>

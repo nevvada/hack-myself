@@ -1,0 +1,15 @@
+{
+  "name": "sql-injection",
+  "version": "1.0.0",
+  "description": "SQL Injection Example",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js -o"
+  },
+  "keywords": [],
+  "author": "Nathan Le Master",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

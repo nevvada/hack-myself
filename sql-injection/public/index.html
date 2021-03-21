@@ -9,64 +9,25 @@
   </head>
   <body>
     <form
-      action="/user"
+      action="/login"
       method="POST"
     >
       <div class="form-field">
-        <div class="form-field-title">Full Name</div>
+        <div class="form-field-title">Username</div>
         <input
-          name="full_name"
+          name="username"
           required
           type="text"
         />
       </div>
 
       <div class="form-field">
-        <div class="form-field-title">Favorite colors</div>
+        <div class="form-field-title">Password</div>
         <input
-          name="favorite_color"
-          type="checkbox"
-          value="red"
+          name="password"
+          required
+          type="text"
         />
-        <label for="red">red</label>
-
-        <input
-          name="favorite_color"
-          type="checkbox"
-          value="green"
-        />
-        <label for="green">green</label>
-
-        <input
-          name="favorite_color"
-          type="checkbox"
-          value="blue"
-        />
-        <label for="blue">blue</label>
-
-        <input
-          name="favorite_color"
-          type="checkbox"
-          value="other"
-        />
-        <label for="other">other</label>
-      </div>
-
-      <div class="form-field">
-        <div class="form-field-title">Ice cream preference</div>
-        <input
-          name="ice_cream_preference"
-          type="radio"
-          value="vanilla"
-        />
-        <label for="vanilla">vanilla</label>
-
-        <input
-          name="ice_cream_preference"
-          type="radio"
-          value="chocolate"
-        />
-        <label for="chocolate">chocolate</label>
       </div>
 
       <input type="submit" />

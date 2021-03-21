@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 
-const { createUser } = require('./controllers/dbController');
+const { verifyUser } = require('./controllers/dbController');
 
 const PORT = 3000;
 const app = express();
@@ -18,8 +18,6 @@ app.get('/', (req, res) => {
     .sendFile(path.join(__dirname, '../public/index.html'));
 });
 
-app.post('/user', createUser, (req, res) => {
-  res.redirect('/');
-});
+app.post('/login', verifyUser);
 
 app.listen(PORT, () => console.log(`Listening on ${PORT}`));

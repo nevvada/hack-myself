@@ -1,23 +1,28 @@
 const { pool } = require('../database/database');
 
-
-const createUser = (req, res, next) => {
+const verifyUser = async (req, res, next) => {
   const {
-    favorite_color,
-    full_name,
-    ice_cream_preference,
+    username,
+    password
   } = req.body;
 
-  const insertQuery = {
-    text: 'INSERT INTO users (full_name, favorite_color, ice_cream_preference) VALUES($1, $2, $3)',
-    values: [full_name, favorite_color, ice_cream_preference],
-  };
+  const query = "SELECT * FROM users WHERE username='" + username + "' AND password='" + password + "'";
 
-  pool.query(insertQuery);
+  try {
+    const result = await pool.query(query);
 
-  next();
+    if (result.rows.length) {
+      return res
+        .status(400)
+        .send(result.rows);
+    }
+
+    res
+      .status(401)
+      .redirect('/');
+  } catch (err) {
+    console.error(err);
+  }
 };
 
-module.exports = {
-  createUser,
-};
+module.exports = { verifyUser };

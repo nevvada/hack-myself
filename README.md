@@ -1,2 +1,2 @@
 # hack-myself
-something something hackerman
+a collection of common frontend security attack vectors

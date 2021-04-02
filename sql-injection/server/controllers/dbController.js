@@ -13,7 +13,7 @@ const verifyUser = async (req, res, next) => {
 
     if (result.rows.length) {
       return res
-        .status(400)
+        .status(200)
         .send(result.rows);
     }
 

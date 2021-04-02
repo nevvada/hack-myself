@@ -1,1 +1,0 @@
-To implement a SQL injection, for the username and password fields use the text ' OR 1=1; --

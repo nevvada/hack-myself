@@ -8,7 +8,7 @@ First run
 yarn install
 ```
 or
-```
+```bash
 npm install
 ```
 
@@ -17,7 +17,7 @@ then run
 yarn start
 ```
 or
-```
+```bash
 npm start
 ```
 
@@ -30,4 +30,4 @@ By appending this *always* truthy statement to the SQL query `"SELECT * FROM USE
 *ofc this isn't a practical query, just a demonstration*
 
 ## How to Avoid:
-The best approach would be through parametized queries. In my PostgreSQL example, I'm using string concatenation for the query, which is extremely dangerous, since it allows malicious actors to easily append more to the query. By using dynamic parameters instead, attempting to append to the query will just break the query. See the (docs)[https://node-postgres.com/features/queries] for more.
+The best approach would be through parametized queries. In my PostgreSQL example, I'm using string concatenation for the query, which is extremely dangerous, since it allows malicious actors to easily append more to the query. By using dynamic parameters instead, attempting to append to the query will just break the query. See the [docs](https://node-postgres.com/features/queries) for more.

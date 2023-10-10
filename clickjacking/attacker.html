@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attacker 👹</title>
+  </head>
+
+  <style>
+    .sneaky {
+      height: 100dvh;
+      width: 100dvh;
+    }
+  </style>
+
+  <body>
+    <div class="sneaky" />
+    <script>
+      const sneakyElement = document.querySelector('.sneaky');
+
+      sneakyElement.addEventListener('click', () => {
+        parent.location.href = './virus.html';
+      });
+    </script>
+  </body>
+</html>
